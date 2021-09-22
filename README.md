@@ -5,12 +5,12 @@
 [http://mercury.picoctf.net:14804/](http://mercury.picoctf.net:14804/)
 
 ## Methodology
-    It turns out that we need to satisfy multiple requirements in the header in order to get the flag. Please refer to the script.
+It turns out that we need to satisfy multiple requirements in the header in order to get the flag. Please refer to the script.
 ## Solution
-    This solution is divided into several steps.
+This solution is divided into several steps.
 
 ### Stage1
-    First, we use the wget command on the terminal to download the website content. After downloading and using vim to open the file, I found a sentence with content like the picture below:
+First, we use the wget command on the terminal to download the website content. After downloading and using vim to open the file, I found a sentence with content like the picture below:
 
 ![image](https://media.discordapp.net/attachments/871393677304553473/890139553577451530/unknown.png)
 
