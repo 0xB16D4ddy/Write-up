@@ -1,7 +1,10 @@
-# Write-up
-Write-up for challenges
+# Who are you?
+## Description
+*Try to recover the flag stored on this website* 
+## Attachments
+[http://mercury.picoctf.net:14804/](http://mercury.picoctf.net:14804/)
+
+
 ``` 
-print "hello"
-A = 18
-print(a)
+print("anh khoa đẹp trai")
 ```
