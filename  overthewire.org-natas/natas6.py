@@ -4,7 +4,7 @@ import re
 from html import unescape
 
 
-with open('natas6.html','a') as out:
+with open('natas6.html','w') as out:
 
     username = "natas6"
     password = 'aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1'
@@ -14,14 +14,16 @@ with open('natas6.html','a') as out:
     url = 'http://%s.natas.labs.overthewire.org' % username
 
     # r = s.get(url, auth = (username, password))
-    # r = s.get(url + "/index-source.html", auth = (username, password))
-    r = s.post(url,data = {"secret" : "submit"} , auth = (username, password))
+    # r = s.get(url + "/includes/secret.inc", auth = (username, password))
+    # r = s.get(url + "index-source.html", auth = (username, password))
+    r = s.post(url,data = {"secret" : "FOEIUWGHFEEUHOFUOIU", "submit":"submit"} , auth = (username, password))
     content =  r.text
 
-    out.write(unescape(content))
+    # out.write(unescape(content))
 
 
-# print(re.findall('The password for natas6 is (.*)</div>',content)[0])
+#   print(re.findall(' natas7 is (.*)',content)[0])
+    out.write((re.findall(' natas7 is (.*)',content)[0]))
 
 
 '''
