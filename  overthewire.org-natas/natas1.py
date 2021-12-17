@@ -8,7 +8,6 @@ password = 'gtVrDuiDfck831PqWsLEZy5gyDz1clto'
 s = requests.session()
 
 url = 'http://%s.natas.labs.overthewire.org' % username
-
 r = s.get(url, auth = (username, password))
 content = r.text
 # print(content)
