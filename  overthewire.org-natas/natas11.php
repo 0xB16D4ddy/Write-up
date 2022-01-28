@@ -1,24 +1,33 @@
-#!/usr/bin/php 7.4.27
+#!/usr/bin/php
 <?php
     
-    $defaultdata = array("showpassword" => "no", "bgcolor"=>"#ffffff");
-    function xor_encrypt($in, $key)
-    {
-        $text = $in;
-        $outText = '';
+    $defaultdata= array("showpassword" => "no","bgcolor"=>"#ffffff");
+    function xor_encrypt($in, $key){
+        $text = $in;
+        $outText = '';
     
-        // Iterate through each character
-        for($i=0;$i<strlen($text);$i++) {
-        $outText .= $text[$i] ^ $key[$i % strlen($key)];
-        }
+        //Iterate through each character
+        for($i=0;$i<strlen($text);$i++) {
+        $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
     
-        return $outText;
+        return$outText;
     }
 
-    $ciphertext = hex2bin('0a554b221e00482b02044f2503131a70531957685d555a2d121854250355026852115e2c17115e680c');
-    // $key
-    $plaintext = json_decode($defaultdata);
+    // $ciphertext = hex2bin('0a554b221e00482b02044f2503131a70531957685d555a2d121854250355026852115e2c17115e680c');
+    $key = 'qw8J';
+    // $plaintext = json_encode($defaultdata);
+    // echo(xor_encrypt($plaintext, $key));
+    
+    
+    $good_data = array("showpassword" => "yes","bgcolor"=>"#ffffff");
+    
+    $good_plaintext = json_encode($good_data);
+    
+    $good_ciphertext = xor_encrypt($good_plaintext ,$key);
 
-    echo(xor_encrypt($ciphertext, $plaintext));
-    // phpinfo();
+    $cookie = base64_encode($good_ciphertext);
+   
+    echo($cookie)
+    
 ?>
