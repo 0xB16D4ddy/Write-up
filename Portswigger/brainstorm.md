@@ -8,7 +8,7 @@ Hack = Solve Puzzle = Chơi ghép hình
 3. Biết đc rằng nguyên tắc của HTTPD chính là nhìn vào đuổi file cuối cùng của `{filename}.php` để xác định rằng đây có phải là tập tin PHP và đưa cho mod-php xử lý không?
 4. Nếu tìm được cách upload file có đuôi `.php` thì HTTPD sẽ thực thi code ngay -> GAMEOVER
 
-## Vấn đề [ý là tại sao lại không dùng cách giải giống level 1]:
+## Vấn đề Lý là tại sao lại không dùng cách giải giống level 1]:
 1. Lập trình viên đã sàng lọc (filer) không cho phép upload đuôi file `.php` bằng cách nào? Bằng cách dùng `explode` để nổ dấu `.` trong filename rồi lấy phần tử có index [1]
 ```php
     $filename = $_FILES["file"]["name"];
