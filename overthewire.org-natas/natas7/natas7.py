@@ -5,7 +5,7 @@ from html import unescape
 
 with open('natas7.html', 'w+') as out:
     username = 'natas7'
-    password = '7z3hEENjQtflzgnT29q7wAvMNfZdh0i9'
+    password = 'jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr'
     
     s = requests.session()
 
@@ -15,6 +15,7 @@ with open('natas7.html', 'w+') as out:
     content = r.text
     
     # out.write(content)
+    print(re.findall('<br>\n(.*)\n\n<!--',content)[0])
     out.write(re.findall('<br>\n(.*)\n\n<!--', content)[0])
 
 

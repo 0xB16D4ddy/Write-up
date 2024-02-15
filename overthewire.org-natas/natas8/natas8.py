@@ -6,7 +6,7 @@ from html import unescape
 
 with open('natas8.html', 'w+') as out:
     username = 'natas8'
-    password = 'DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe'
+    password = 'a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB'
 
     s = requests.session()
 
@@ -19,4 +19,5 @@ with open('natas8.html', 'w+') as out:
 
     # out.write(unescape(content))
     # out.write(content)
+    print(re.findall('natas9 is (.*)\n<form', content)[0])
     out.write(re.findall('natas9 is (.*)\n<form', content)[0])

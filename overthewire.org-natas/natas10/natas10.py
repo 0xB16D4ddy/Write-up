@@ -5,7 +5,7 @@ from html import unescape
 
 with open('natas10.html', 'w+') as out:
     username = 'natas10'
-    password = 'nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu'
+    password = 'D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE'
     
     url='http://%s.natas.labs.overthewire.org' % username
     
@@ -15,4 +15,5 @@ with open('natas10.html', 'w+') as out:
     content = r.text
 
     # out.write(unescape(content))
+    print(re.findall('<pre>\n(.*)\n</pre>', content)[0])
     out.write(re.findall('<pre>\n(.*)\n</pre>', content)[0])
